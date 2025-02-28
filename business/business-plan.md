@@ -1,4 +1,4 @@
-# Business Plan
+# Moringa Business Plan
 
 ## Timelines from Setup to First Harvest and Beyond
 
