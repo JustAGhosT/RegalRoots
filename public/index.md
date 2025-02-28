@@ -2,6 +2,11 @@
 
 Welcome to Regal Roots: The Grove and Goatery Estate, a local farm dedicated to sustainable farming practices and community involvement.
 
+## Quick Links
+
+- [Public Site](https://justaghost.github.io/RegalRoots/public/)
+- [Business Plan](https://justaghost.github.io/RegalRoots/business/business-plan/)
+
 ## History of the Farm
 
 ### Founding of the Farm
