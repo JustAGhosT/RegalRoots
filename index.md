@@ -1,3 +1,8 @@
+---
+layout: home
+title: "Welcome to Regal Roots"
+---
+
 # Welcome to Regal Roots: The Grove and Goatery Estate
 
 Welcome to Regal Roots: The Grove and Goatery Estate, a local farm dedicated to sustainable farming practices and community involvement.
