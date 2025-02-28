@@ -22,4 +22,4 @@ Enjoy fresh, farm-to-table meals at our on-site restaurant. Our menu features di
 
 ## Contact Us
 
-For more information or to get in touch, please visit our [Contact Us](contact.md) page.
+For more information or to get in touch, please visit our [Contact Us](public/contact.md) page.
