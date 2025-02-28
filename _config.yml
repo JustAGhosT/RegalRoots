@@ -39,6 +39,8 @@ nav:
     url: "/business/business-plan/"
   - title: "Expenses Breakdown"
     url: "/business/expenses-breakdown/"
+  - title: "Timelines"
+    url: "/business/timelines/"
 
 # Social sharing
 twitter_username: "regalroots"

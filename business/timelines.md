@@ -1,4 +1,4 @@
-# Moringa Business Plan
+# Timelines
 
 ## Timelines from Setup to First Harvest and Beyond
 
@@ -29,74 +29,3 @@ Trees become well-established and more productive. Expect significantly larger l
 By Year 3, trees reach peak or near-peak production. A healthy tree can yield 300+ pods in Year 2 and around 1,000 pods by Year 3 under ideal conditions. Leaf production also increases with the larger tree canopy. Continue a cycle of pruning and harvesting leaves every few months. The orchard can remain productive for many years (Moringa is a perennial tree) with proper pruning and care. At this stage, consider expanding the farm or intercropping if market demand supports it. Regularly evaluate yields and market prices to plan any scaling of operations.
 
 Tip: Timing planting with the rainy season (spring/summer) in Bela Bela is crucial. Bela Bela receives ~400–500 mm of rain annually, mostly between October and March. This natural rainfall will reduce initial irrigation needs and help young Moringa trees establish quickly. During the dry winter months (May–September), growth will slow and additional irrigation may be needed for continued leaf production or to keep trees healthy.
-
-## Detailed Costs and Potential Income Streams
-
-### Initial Setup Costs
-
-- Land preparation: ZAR 2,000–3,000
-- Seeds or saplings: ZAR 1,000–2,000
-- Irrigation system: ZAR 3,000–5,000
-- Tools and equipment: ZAR 1,000–2,000
-- Labor: ZAR 2,000–3,000
-
-### Ongoing Costs
-
-- Water and irrigation: ZAR 500–1,000 per month
-- Fertilizers and compost: ZAR 500–1,000 per month
-- Pest control: ZAR 200–500 per month
-- Labor: ZAR 2,000–3,000 per month
-
-### Potential Income Streams
-
-- Fresh leaves: ZAR 50–100 per kg
-- Dried leaves: ZAR 200–300 per kg
-- Leaf powder: ZAR 300–500 per kg
-- Pods (drumsticks): ZAR 10–20 per pod
-
-## Land and Water Requirements
-
-### Land Requirements
-
-- Moringa trees require well-drained soil with a pH of 6.0–7.0.
-- A spacing of 2.5–3 meters between trees is recommended for optimal growth.
-- A plot of 1 hectare can accommodate approximately 1,000–1,200 trees.
-
-### Water Requirements
-
-- Moringa trees require regular watering, especially during the first 6 months.
-- Drip irrigation is recommended to ensure efficient water use.
-- During the rainy season, natural rainfall can reduce the need for additional irrigation.
-
-## Labor Needs and Important Agronomic Practices
-
-### Labor Needs
-
-- Initial setup: 2–3 workers for land preparation, planting, and irrigation setup.
-- Ongoing maintenance: 1–2 workers for watering, weeding, pest control, and harvesting.
-- Processing: 1–2 workers for drying, grinding, and packaging leaves.
-
-### Agronomic Practices
-
-- Regular weeding to prevent competition for nutrients and water.
-- Pruning to encourage branching and increase leaf production.
-- Pest control to protect young plants from pests and diseases.
-- Fertilization with organic compost to promote healthy growth.
-
-## Comparing Moringa’s Viability with Alternative Crops
-
-### Lucerne
-
-- Lucerne (alfalfa) is a high-protein forage crop used for animal feed.
-- Requires more water and maintenance compared to Moringa.
-- Lower market value compared to Moringa leaves and pods.
-
-### Dragonfruit
-
-- Dragonfruit is a tropical fruit with high market demand.
-- Requires trellising and more intensive care compared to Moringa.
-- Higher initial setup costs and longer time to first harvest.
-
-### Conclusion
-
-Moringa is a viable and profitable crop for small-scale farming in Bela Bela. Its fast growth, low water requirements, and multiple income streams make it an attractive option compared to alternative crops like Lucerne and Dragonfruit. With proper planning and care, a Moringa farm can provide sustainable income and contribute to the local economy.
