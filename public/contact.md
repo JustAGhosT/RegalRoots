@@ -22,6 +22,6 @@ Follow us on social media to stay updated with the latest news and events:
 
 ## Contact Form
 
-You can also reach us by filling out the contact form on our website. We will get back to you as soon as possible.
+You can also reach us by filling out the contact form on our [website](https://justaghost.github.io/RegalRoots/contact/). We will get back to you as soon as possible.
 
 Thank you for your interest in Regal Roots: The Grove and Goatery Estate. We look forward to hearing from you!
