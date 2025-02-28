@@ -10,9 +10,12 @@ Regal Roots: The Grove and Goatery Estate is a local farm dedicated to sustainab
 
 - `_config.yml`: Configuration file for the Jekyll site.
 - `index.md`: Home page of the website.
-- `about.md`: About page with information about the farm.
-- `products.md`: Page highlighting our key products.
-- `contact.md`: Contact page with various contact methods.
+- `public/about.md`: About page with information about the farm.
+- `public/products.md`: Page highlighting our key products.
+- `public/contact.md`: Contact page with various contact methods.
+- `business/`: Directory containing business-related documents.
+  - `business-plan.md`: Business plan for the farm.
+  - `expenses-breakdown.md`: Breakdown of expenses for the farm.
 
 ## How to Contribute
 
