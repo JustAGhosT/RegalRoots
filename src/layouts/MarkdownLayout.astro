@@ -1,0 +1,23 @@
+---
+// Props passed from Markdown files
+const { title, description } = Astro.props;
+---
+
+<html>
+  <head>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>{title}</h1>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <p>© 2025 Regal Roots</p>
+    </footer>
+  </body>
+</html>

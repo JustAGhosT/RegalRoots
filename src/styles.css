@@ -1,0 +1,38 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3 {
+    color: #4CAF50;
+  }
+  
+  p, ul, li {
+    margin-bottom: 1rem;
+  }
+  
+  a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  header {
+    background: #f4f4f4;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  footer {
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  

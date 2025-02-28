@@ -1,0 +1,70 @@
+---
+export const title = "Home Layout";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header>
+      <h1>Regal Roots</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <p>© 2025 Regal Roots. All rights reserved.</p>
+    </footer>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+      }
+
+      header {
+        background: #4CAF50;
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      nav ul li {
+        display: inline;
+        margin: 0 1rem;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+      }
+
+      footer {
+        text-align: center;
+        padding: 1rem;
+        background: #f4f4f4;
+        color: #333;
+      }
+    </style>
+  </body>
+</html>
