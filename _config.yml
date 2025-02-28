@@ -1,0 +1,41 @@
+title: "Regal Roots: The Grove and Goatery Estate"
+description: "A local farm dedicated to sustainable farming practices and community involvement."
+baseurl: ""
+url: "https://github.com/githubnext/workspace-blank"
+theme: "minimal-mistakes"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Minimal Mistakes theme settings
+minimal_mistakes_skin: "default"
+show_excerpts: true
+author:
+  name: "Regal Roots"
+  avatar: "/assets/images/avatar.png"
+  bio: "A local farm dedicated to sustainable farming practices and community involvement."
+  location: "Bela Bela"
+  email: "info@regalroots.com"
+  links:
+    - label: "GitHub"
+      url: "https://github.com/githubnext/workspace-blank"
+    - label: "Twitter"
+      url: "https://twitter.com/regalroots"
+    - label: "Facebook"
+      url: "https://facebook.com/regalroots"
+
+# Navigation
+nav:
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/about/"
+  - title: "Products"
+    url: "/products/"
+  - title: "Contact"
+    url: "/contact/"
+
+# Social sharing
+twitter_username: "regalroots"
+github_username: "githubnext"
