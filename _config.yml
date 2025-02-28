@@ -1,7 +1,7 @@
 title: "Regal Roots: The Grove and Goatery Estate"
 description: "A local farm dedicated to sustainable farming practices and community involvement."
-baseurl: "/RegalRoots"
-url: "https://justaghost.github.io"
+baseurl: ""
+url: "https://justaghost.github.io/RegalRoots"
 theme: "minimal-mistakes"
 
 # Build settings
@@ -13,7 +13,7 @@ minimal_mistakes_skin: "default"
 show_excerpts: true
 author:
   name: "Regal Roots"
-  avatar: "/assets/images/avatar.png"
+  avatar: "/public/images/avatar.png"
   bio: "A local farm dedicated to sustainable farming practices and community involvement."
   location: "Bela Bela"
   email: "info@regalroots.com"
@@ -30,11 +30,11 @@ nav:
   - title: "Home"
     url: "/"
   - title: "About"
-    url: "/public/about/"
+    url: "/about/"
   - title: "Products"
-    url: "/public/products/"
+    url: "/products/"
   - title: "Contact"
-    url: "/public/contact/"
+    url: "/contact/"
   - title: "Business Plan"
     url: "/business/business-plan/"
   - title: "Expenses Breakdown"
