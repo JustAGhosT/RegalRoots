@@ -1,6 +1,6 @@
 title: "Regal Roots: The Grove and Goatery Estate"
 description: "A local farm dedicated to sustainable farming practices and community involvement."
-baseurl: "/RegalRoots"
+baseurl: "/"
 url: "https://justaghost.github.io"
 remote_theme: "mmistakes/minimal-mistakes"
 
@@ -28,20 +28,25 @@ author:
 # Navigation
 nav:
   - title: "Home"
-    url: "/"
+    url: "/RegalRoots/"  # Include the baseurl
   - title: "About"
-    url: "/about/"
+    url: "/RegalRoots/about/"
   - title: "Products"
-    url: "/products/"
+    url: "/RegalRoots/products/"
   - title: "Contact"
-    url: "/contact/"
+    url: "/RegalRoots/contact/"
   - title: "Business Plan"
-    url: "/business/business-plan/"
+    url: "/RegalRoots/business/business-plan/"
   - title: "Expenses Breakdown"
-    url: "/business/expenses-breakdown/"
+    url: "/RegalRoots/business/expenses-breakdown/"
   - title: "Timelines"
-    url: "/business/timelines/"
+    url: "/RegalRoots/business/timelines/"
 
 # Social sharing
 twitter_username: "regalroots"
 github_username: "githubnext"
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+

@@ -2,6 +2,9 @@
 
 source "https://rubygems.org"
 
+gem "csv"
+gem "base64"
+
 # Jekyll gem
 gem "jekyll", "~> 4.3.2"
 
@@ -15,6 +18,8 @@ gem "jekyll-sitemap", "~> 1.4"
 gem "jekyll-paginate", "~> 1.1"
 gem "jekyll-archives", "~> 2.2"
 gem "jekyll-compose", "~> 0.12"
+gem "jekyll-include-cache", "~> 0.2"
+
 
 # Markdown rendering
 gem "kramdown-parser-gfm", "~> 1.1"
@@ -23,8 +28,5 @@ gem "kramdown-parser-gfm", "~> 1.1"
 gem "jekyll-remote-theme", "~> 0.4.3"
 
 group :jekyll_plugins do
-  gem "jekyll-feed"
-  gem "jekyll-seo-tag"
-  gem "jekyll-sitemap"
-  gem "jekyll-paginate"
+  # Only include plugins not already specified above
 end
