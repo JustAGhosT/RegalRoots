@@ -1,16 +1,11 @@
 title: "Regal Roots: The Grove and Goatery Estate"
 description: "A local farm dedicated to sustainable farming practices and community involvement."
-baseurl: "/"
+baseurl: "/RegalRoots"
 url: "https://justaghost.github.io"
-remote_theme: "mmistakes/minimal-mistakes"
 
 # Build settings
-markdown: kramdown
-highlighter: rouge
 
 # Minimal Mistakes theme settings
-minimal_mistakes_skin: "default"
-show_excerpts: true
 author:
   name: "Regal Roots"
   avatar: "/RegalRoots/public/images/avatar.png"

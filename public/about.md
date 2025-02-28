@@ -46,4 +46,4 @@ Our farm includes a goatery, organic vegetable fields, and a farm-to-table resta
 
 ## Contact Us
 
-For more information or to get in touch, please visit our [Contact Us](public/contact.md) page.
+For more information or to get in touch, please visit our [Contact Us](contact.md) page.
