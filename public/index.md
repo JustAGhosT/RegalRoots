@@ -46,3 +46,17 @@ Enjoy fresh, farm-to-table meals at our on-site restaurant.
 ## Contact Us
 
 For more information or to get in touch, please visit our [Contact Us](contact.md) page.
+
+## Additional Information
+
+### About Us
+
+Regal Roots is a local farm dedicated to sustainable farming practices and community involvement.
+
+### Our Products
+
+We offer a variety of organic vegetables, goat milk products, and farm-to-table meals.
+
+### Contact Us
+
+For more information or to get in touch, please visit our [Contact Us](contact.md) page.
