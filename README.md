@@ -26,3 +26,7 @@ We welcome contributions to improve our website. Please feel free to submit issu
 ## License
 
 This project is licensed under the MIT License.
+
+## Public Site URL
+
+The public site is available at [https://justaghost.github.io/RegalRoots/](https://justaghost.github.io/RegalRoots/)
