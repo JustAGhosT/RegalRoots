@@ -35,6 +35,10 @@ nav:
     url: "/products/"
   - title: "Contact"
     url: "/contact/"
+  - title: "Business Plan"
+    url: "/business-plan/"
+  - title: "Expenses Breakdown"
+    url: "/expenses-breakdown/"
 
 # Social sharing
 twitter_username: "regalroots"
