@@ -10,7 +10,7 @@ order: 10
 slug: "gantt-chart"
 ---
 
-<a href="../../RegalRoots/business/gantt" class="special-link">
+<a href="../../business/gantt" class="special-link">
   Click here to view the Gantt Chart
 </a>
 
