@@ -5,7 +5,8 @@ date: 2025-02-28
 updated: 2025-03-01
 draft: false
 featured: false
-related: []
+related: ["10_gantt_timelines.md", "12_labor_agronomic_practices.md"]
+order: 1
 ---
 
 # 1. Introduction

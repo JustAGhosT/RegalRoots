@@ -1,0 +1,114 @@
+---
+import ZoomableMermaid from '../../components/ZoomableMermaid.svelte';
+import Layout from '../../layouts/Layout.astro';
+
+export const frontmatter = {
+  title: 'Gantt Timelines',
+  description: 'Implementation schedule from pre-planting through Year 3...',
+};
+---
+
+<Layout title="Planned Timeline">
+  <!-- Intro Section -->
+  <section class="content-section">
+    <h2 class="section-title">Gantt Timelines (Interactive)</h2>
+    <p class="section-subtitle">
+      This timeline outlines our step-by-step implementation plan from land preparation
+      through Year 3. The schedule incorporates phased enlargements—expanding the cultivated crop
+      area to <strong>up to 2 hectares</strong>—plus a separate area for livestock.
+    </p>
+  </section>
+
+  <!-- Chart Section -->
+  <section class="content-section">
+    <ZoomableMermaid
+      client:load
+      chartCode={`
+gantt
+dateFormat YYYY-MM
+title Bela Bela Farm Timeline (Jan 2025 – Aug 2028)
+
+%% Define a custom class with fill & stroke
+%% classDef myBar fill:#c2f0c2,stroke:#14532d,stroke-width:2px
+
+%% --------------------------------------------
+%% Year 0: Jan–Aug 2025
+%% --------------------------------------------
+section Year 0 (Jan–Aug 2025)
+Land Prep & Infrastructure:landPrep, 2025-01, 3m
+Basic Irrigation, Seeds & Cuttings:irrigSeeds, 2025-04, 2m
+Trellis Building & Nursery Setup:trellisNursery, 2025-06, 2m
+
+%% --------------------------------------------
+%% Year 1: Sep 2025 – Aug 2026
+%% --------------------------------------------
+section Year 1 (Sep 2025 – Aug 2026)
+Plant Moringa & Lucerne:plant, 2025-09, 2m
+Watering & Weeding:waterWeed, after plant, 2m
+Light Moringa Harvest & Lucerne Cut #1:harvest1, 2026-01, 2m
+Dragonfruit Care & Monitoring:dfCare, after harvest1, 2m
+Evaluate Partial Harvest & Dryness:evalDry, 2026-05, 2m
+Off-season Maintenance, Frost Watch:offSeason1, 2026-07, 2m
+
+%% --------------------------------------------
+%% Year 2: Sep 2026 – Aug 2027
+%% --------------------------------------------
+section Year 2 (Sep 2026 – Aug 2027)
+Major Moringa Harvest #1:moringaMajor, 2026-09, 3m
+Lucerne Cut #2 or #3 & Dragonfruit Yield:lucDFYield, after moringaMajor, 2m
+Process & Market Moringa Powder:processMarket, after lucDFYield, 2m
+Off-season Tasks (Pruning, Frost, Irrigation Adjust):offSeason2, 2027-04, 3m
+Summarize Year 2 & Plan Expansion:planExpansion, after offSeason2, 2m
+
+%% --------------------------------------------
+%% Year 3: Sep 2027 – Aug 2028
+%% --------------------------------------------
+section Year 3 (Sep 2027 – Aug 2028)
+Expand Cultivated Area to ~2 ha:expand2ha, 2027-09, 4m
+Moringa Harvest Cycles (2–3 per year):multiHarvest, after expand2ha, 2m
+Evaluate Further Expansion & Reinvest:evalReinvest, 2028-03, 3m
+Full-scale Production on 2 ha:fullScale, after evalReinvest, 2m
+
+
+%% Assign classes
+%%class landPrep myBar
+%%class irrigSeeds myBar
+%%class trellisNursery myBar
+%%class plant myBar
+%%class waterWeed myBar
+%%class harvest1 myBar
+%%class dfCare myBar
+%%class evalDry myBar
+%%class offSeason1 myBar
+%%class moringaMajor myBar
+%%class lucDFYield myBar
+%%class processMarket myBar
+%%class offSeason2 myBar
+%%class planExpansion myBar
+%%class expand2ha myBar
+%%class multiHarvest myBar
+%%class evalReinvest myBar
+%%class fullScale myBar
+`}
+    />
+  </section>
+
+  <!-- Additional Info Section -->
+  <section class="content-section">
+    <ul class="list-disc list-inside space-y-2">
+      <li>
+        <strong>Lucerne:</strong> Can be sown in late winter or early spring (Aug–Sep) 
+        or mid-summer if conditions allow. Cuts happen approximately every 6–8 weeks 
+        in the growing season.
+      </li>
+      <li>
+        <strong>Dragonfruit:</strong> Slow to first fruit (~Year 2). Initial tasks revolve 
+        around building trellises, planting, vine training, and frost protection.
+      </li>
+      <li>
+        <strong>Moringa:</strong> First big leaf harvest is ~6–8 months after planting. 
+        If planted in Sep 2025, a major leaf harvest could occur around Mar–Apr 2026.
+      </li>
+    </ul>
+  </section>
+</Layout>

@@ -336,6 +336,10 @@ img {
   margin-bottom: 1rem;
 }
 
+.content-article ul li:first-child {
+  margin-top: 1rem;           /* Adds top margin to the first bullet */
+}
+
 .content-article ul ul {
   list-style-type: circle;     /* Nested lists get circle bullets */
   margin-left: 1.5rem;
@@ -363,3 +367,20 @@ img {
   text-decoration: underline;
   font-weight: 600;
 }
+
+.special-link {
+  display: inline-block;
+  background-color: #27ae60;
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  margin: 0.5rem 0;
+}
+
+.special-link:hover {
+  background-color: #2ecc71;
+}
+

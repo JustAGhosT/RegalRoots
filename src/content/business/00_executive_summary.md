@@ -1,10 +1,10 @@
 ---
 title: "Executive Summary"
 description: "High-level overview of the diversified farm plan in Bela Bela."
-order: 0
 draft: false
 featured: true
 related: []
+order: 0
 ---
 
 # Executive Summary

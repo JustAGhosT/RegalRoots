@@ -8,7 +8,7 @@
       <div class="footer-section">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="/business/business-plan">Business Plan</a></li>
+          <li><a href="/RegalRoots/business/business-plan">Business Plan</a></li>
           <li><a href="/products">Our Products</a></li>
           <li><a href="/about">About Us</a></li>
           <li><a href="/contact">Contact</a></li>

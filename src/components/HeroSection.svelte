@@ -1,9 +1,7 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte';
-  // Import icons from lucide-svelte (install with `npm install lucide-svelte`)
   import { ChevronLeft, ChevronRight } from 'lucide-svelte';
 
-  // Props for text and links
   export let heading: string;
   export let subtitle: string;
   export let primaryCtaLabel: string;
@@ -11,7 +9,6 @@
   export let secondaryCtaLabel: string;
   export let secondaryCtaHref: string;
 
-  // Array of image URLs to rotate through
   let heroImages = [
     '/RegalRoots/images/farm-herov1.png',
     '/RegalRoots/images/farm-herov2.png',
@@ -27,10 +24,11 @@
   let currentIndex = 0;
   let interval: number;
 
-  // Automatically rotate images every X seconds
   onMount(() => {
+    // Random start
+    currentIndex = Math.floor(Math.random() * heroImages.length);
+    // Auto-rotate
     interval = window.setInterval(() => {
-      console.log('auto-rotate triggered');
       nextImage();
     }, 5000);
   });
@@ -40,16 +38,12 @@
   });
 
   function nextImage() {
-    console.log('nextImage() called before:', currentIndex);
     currentIndex = (currentIndex + 1) % heroImages.length;
-    console.log('nextImage() called after:', currentIndex);
-  }
-  function prevImage() {
-    console.log('prevImage() called before:', currentIndex);
-    currentIndex = (currentIndex - 1 + heroImages.length) % heroImages.length;
-    console.log('prevImage() called after:', currentIndex);
   }
 
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + heroImages.length) % heroImages.length;
+  }
 </script>
 
 <!-- Hero Container -->
@@ -76,13 +70,13 @@
   </div>
 
   <!-- Left Rotator Button -->
-  <button on:click={prevImage} class="hero-rotator-left">
-    <ChevronLeft size={20} />
+  <button on:click={prevImage} class="hero-rotator hero-rotator-left">
+    <ChevronLeft size={24} />
   </button>
 
   <!-- Right Rotator Button -->
-  <button on:click={nextImage} class="hero-rotator-right">
-    <ChevronRight size={20} />
+  <button on:click={nextImage} class="hero-rotator hero-rotator-right">
+    <ChevronRight size={24} />
   </button>
 </div>
 
@@ -93,7 +87,7 @@
     min-height: 600px;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Parallax effect on desktop */
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,7 +95,7 @@
     text-align: center;
     color: #fff;
     padding: 2rem;
-    transition: background-image 0.8s ease-in-out; /* Smooth transition */
+    transition: background-image 0.8s ease-in-out;
   }
 
   .hero-parallax h1 {
@@ -157,15 +151,14 @@
   }
 
   /* Rotator Buttons (Icons) */
-  .hero-rotator-left,
-  .hero-rotator-right {
+  .hero-rotator {
     position: absolute;
     bottom: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;        /* bigger tap area */
+    height: 3rem;       /* bigger tap area */
     background-color: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 50%;
@@ -183,18 +176,33 @@
     right: 1rem;
   }
 
-  .hero-rotator-left:hover,
-  .hero-rotator-right:hover {
+  .hero-rotator:hover {
     background-color: rgba(0, 0, 0, 0.7);
   }
 
   @media (max-width: 768px) {
     .hero-parallax {
       min-height: 500px;
-      background-attachment: scroll; /* Disable parallax on mobile */
+      background-attachment: scroll;
     }
     .hero-parallax h1 {
       font-size: 2.5rem;
+    }
+
+    .button-group {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .button {
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+    }
+
+    .hero-rotator {
+      bottom: 2rem; /* Move up a bit so it doesn't clash with CTA buttons */
+      width: 3.5rem;
+      height: 3.5rem;
     }
   }
 </style>
