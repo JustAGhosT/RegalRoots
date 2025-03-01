@@ -1,0 +1,60 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import HeroSection from '../../components/HeroSection.svelte';
+
+// Get all published business docs (i.e. draft is false)
+const publishedDocs = await getCollection('business', ({ data }) => !data.draft);
+
+// Sort docs by the frontmatter "order" field (defaulting to 0)
+const sortedDocs = publishedDocs.sort(
+  (a, b) => (a.data.order ?? 0) - (b.data.order ?? 0)
+);
+
+// Filter featured documents (where featured is true)
+const featuredDocs = sortedDocs.filter(doc => doc.data.featured);
+---
+
+<Layout title="Business Documentation">
+  <HeroSection
+    client:visible
+    heading="Business Documentation"
+    subtitle="Comprehensive documentation for business planning and implementation."
+    primaryCtaLabel="Home"
+    primaryCtaHref="/business"
+  />
+  
+  <div class="container py-8">
+    {featuredDocs.length > 0 && (
+      <section class="content-section">
+        <h2 class="section-title">Featured Documents</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {featuredDocs.map((doc) => (
+            <a href={`/RegalRoots/business/${doc.slug}`} class="card">
+              <h3 class="card-title">{doc.data.title}</h3>
+              {doc.data.description && (
+                <p class="card-text">{doc.data.description}</p>
+              )}
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section class="content-section">
+      <h2 class="section-title">All Documents</h2>
+      <div class="list-group">
+        {sortedDocs.map((doc) => (
+          <a href={`/RegalRoots/business/${doc.slug}`} class="list-item">
+            <div>
+              <h3 class="list-item-title">{doc.data.title}</h3>
+              {doc.data.description && (
+                <p class="list-item-text">{doc.data.description}</p>
+              )}
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+</Layout>

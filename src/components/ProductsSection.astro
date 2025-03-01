@@ -1,0 +1,25 @@
+---
+import { products } from '../config/products';
+---
+
+<section class="content-section">
+  <h2 class="section-title">Key Products and Services</h2>
+
+  <!-- Global Grid Classes -->
+  <div class="grid grid-cols-1 md:grid-cols-3">
+    {products.map(({ title, Icon, description }) => (
+      <div class="card">
+        <div class="product-header">
+          <!-- Icon Background -->
+          <div class="product-icon-bg">
+            <Icon size={24} class="icon-color" />
+          </div>
+          <h3 class="card-title" style="margin-bottom: 0;">
+            {title}
+          </h3>
+        </div>
+        <p class="card-text">{description}</p>
+      </div>
+    ))}
+  </div>
+</section>

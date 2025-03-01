@@ -1,0 +1,365 @@
+:root {
+  /* Unified color palette */
+  --primary-color: #2ecc71;       /* Emerald green */
+  --secondary-color: #34495e;     /* Wet asphalt */
+  --accent-color: #e67e22;        /* Carrot orange */
+  --text-color: #333333;
+  --background-color: #f8f9fa;
+  --card-background: #ffffff;
+}
+
+/* Global resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* Accounts for a fixed header if needed */
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  overflow-x: hidden;
+  padding-top: 4rem; /* Space for fixed header */
+}
+
+/* Basic Elements */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+p {
+  margin-bottom: 1rem;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Container Utility */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 80vh;
+  min-height: 600px;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('/RegalRoots/images/farm-hero.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Button Group and Buttons */
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.button.primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+.button.primary:hover {
+  background-color: #27ae60;
+  transform: translateY(-2px);
+}
+.button.secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+.button.secondary:hover {
+  background-color: white;
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* Content Sections */
+.content-section {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  padding: 2rem 2rem;
+}
+
+.product-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.product-icon-bg {
+  background-color: #ecfdf5; /* or var(--some-other-color) */
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.icon-color {
+  color: var(--primary-color);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+  text-align: center; /* Center alignment */
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  text-align: center; /* Center alignment */
+}
+
+/* Card Styles */
+.card {
+  background-color: var(--card-background);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: var(--text-color);
+  transition: box-shadow 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.card-text {
+  font-size: 1rem;
+}
+
+/* List Group for Documents */
+.list-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.list-item {
+  background-color: var(--card-background);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: var(--text-color);
+  transition: box-shadow 0.3s ease;
+}
+.list-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.list-item-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.list-item-text {
+  font-size: 1rem;
+}
+
+/* Navigation Links */
+.navigation-back {
+  padding-bottom: 1rem;
+}
+.link-arrow {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.link-arrow:hover {
+  color: #27ae60;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+.grid-cols-1 {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .lg\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+}
+
+/* Side Navigation */
+.side-navigation {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .side-navigation {
+    display: block;
+  }
+}
+.sticky-nav {
+  position: sticky;
+  top: 2rem;
+}
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: var(--text-color);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.nav-link:hover {
+  background-color: #f0f0f0;
+}
+.active-nav-link {
+  background-color: #e1f8e9;
+  color: var(--primary-color);
+}
+
+/* Main Content and Article */
+.main-content {
+  /* Additional styling as needed */
+}
+.content-article {
+  padding: 1rem;
+}
+
+/* Document Navigation */
+.doc-navigation {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 1rem;
+}
+
+/* Related Content */
+.related-content {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .related-content {
+    display: block;
+  }
+}
+
+.content-section--light {
+  background-color: #f8f9fa; /* or another light color */
+}
+
+/* Example overrides for headings in your markdown content */
+
+.content-article h1 {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: 1.25rem;
+}
+
+.content-article h2 {
+  margin-top: 0.75rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--secondary-color);
+}
+
+.content-article h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: var(--secondary-color);
+}
+
+.content-article ul {
+  list-style-type: disc;       /* Use a disc bullet for top-level lists */
+  margin-left: 1.5rem;         /* Indent for clarity */
+  margin-bottom: 1rem;
+}
+
+.content-article ul ul {
+  list-style-type: circle;     /* Nested lists get circle bullets */
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.content-article li {
+  margin-bottom: 0.5rem;       /* Add space between list items */
+}
+
+.content-article p {
+  margin-bottom: 0.5rem;       /* Add space between list items */
+}
+
+.content-article code {
+  background-color: #f8f9fa; /* or a slightly darker shade */
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #d63384; /* example accent color */
+}
+
+.content-article a[href$=".md"] {
+  color: var(--accent-color);
+  text-decoration: underline;
+  font-weight: 600;
+}

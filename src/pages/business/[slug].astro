@@ -1,0 +1,106 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const businessEntries = await getCollection('business');
+  return businessEntries.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { slug } = Astro.params;
+const { entry } = Astro.props;
+
+// Get all published docs and sort them by order
+const publishedDocs = await getCollection('business', ({ data }) => !data.draft);
+const sortedDocs = publishedDocs.sort(
+  (a, b) => (a.data.order ?? 0) - (b.data.order ?? 0)
+);
+
+// Find the index of the current document
+const currentIndex = sortedDocs.findIndex(doc => doc.slug === slug);
+const currentDoc = sortedDocs[currentIndex];
+
+// For next/prev navigation, wrap around the sorted array
+const nextDoc = sortedDocs[(currentIndex + 1) % sortedDocs.length];
+const prevDoc = sortedDocs[(currentIndex - 1 + sortedDocs.length) % sortedDocs.length];
+
+// Related docs: filter docs whose slug is in the current doc's related array (if any)
+const relatedDocs = currentDoc.data.related
+  ? sortedDocs.filter(doc => currentDoc.data.related.includes(doc.slug))
+  : [];
+
+const { Content } = await entry.render();
+---
+
+<Layout title={currentDoc?.data.title || 'Business Documentation'}>
+  <div class="container py-8">
+    <nav class="navigation-back">
+      <a href="/business" class="link-arrow">
+        ← Back to Business Overview
+      </a>
+    </nav>
+  
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+      <!-- Side Navigation -->
+      <aside class="side-navigation">
+        <nav class="sticky-nav">
+          <h3 class="section-heading">Documentation</h3>
+          <ul class="nav-list">
+            {sortedDocs.map(doc => (
+              <li>
+                <a
+                  href={`/RegalRoots/business/${doc.slug}`}
+                  class={`nav-link ${slug === doc.slug ? 'active-nav-link' : ''}`}
+                >
+                  {doc.data.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+  
+      <!-- Main Content -->
+      <main class="main-content lg:col-span-2">
+        <article class="content-article">
+          <Content />
+        </article>
+  
+        <!-- Navigation -->
+        <div class="doc-navigation">
+          {prevDoc && (
+            <a href={`/RegalRoots/business/${prevDoc.slug}`} class="link-arrow">
+              ← {prevDoc.data.title}
+            </a>
+          )}
+          {nextDoc && (
+            <a href={`/RegalRoots/business/${nextDoc.slug}`} class="link-arrow">
+              {nextDoc.data.title} →
+            </a>
+          )}
+        </div>
+      </main>
+  
+      <!-- Related Content -->
+      <aside class="related-content">
+        {relatedDocs.length > 0 && (
+          <div class="sticky-nav">
+            <h3 class="section-heading">Related Documents</h3>
+            <ul class="nav-list">
+              {relatedDocs.map(doc => (
+                <li>
+                  <a href={`/RegalRoots/business/${doc.slug}`} class="nav-link">
+                    {doc.data.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </aside>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,16 @@
+---
+import { missionValues } from '../config/missionValues';
+---
+
+<section class="content-section content-section--light">
+  <h2 class="section-title">Mission and Values</h2>
+  
+  <div class="grid md:grid-cols-2 gap-8">
+    {missionValues.map((value) => (
+      <div class="card">
+        <h3 class="card-title">{value.title}</h3>
+        <p class="card-text">{value.description}</p>
+      </div>
+    ))}
+  </div>
+</section>

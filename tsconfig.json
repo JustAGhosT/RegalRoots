@@ -1,8 +1,16 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "types": ["astro/client", "@astrojs/svelte"]
+    "types": ["astro/client"],
+    "typeRoots": ["node_modules/@types", "src"]
   },
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist", "node_modules"]
+  "include": [
+    ".astro/types.d.ts", 
+    "**/*", 
+    "src/**/*",
+    "src/**/*.ts",
+    "src/**/*.astro",
+    "src/**/*.svelte"
+  ],
+  "exclude": ["dist", "node_modules"],
 }

@@ -1,171 +1,60 @@
 ---
-import Home from "../components/home.svelte";
+import Layout from '../layouts/Layout.astro';
+import HeroSection from '../components/HeroSection.svelte';
+import Timeline from '../components/Timeline.svelte';
+import ProductsSection from '../components/ProductsSection.astro';
+import MissionValues from '../components/MissionValues.astro';
+import ContactUsSection from '../components/ContactUsSection.astro';
+import { milestones } from '../config/milestones';
 ---
 
-<Home title="Welcome to Regal Roots!" />
+<Layout title="Regal Roots Farm - Sustainable Farming">
+  <HeroSection
+    client:visible
+    heading="Welcome to Regal Roots Farm"
+    subtitle="Sustainable. Community-Focused. Real."
+    primaryCtaLabel="View Business Plan"
+    primaryCtaHref="/RegalRoots/business"
+    secondaryCtaLabel="Contact Us"
+    secondaryCtaHref="#contact"
+  />
 
-<article>
-  <section class="hero">
-    <h1>Welcome to Regal Roots!</h1>
-    <p>
-      Welcome to Regal Roots: The Grove and Goatery Estate, a local farm dedicated to sustainable farming practices and community involvement.
-    </p>
-    <a href="#quick-links" class="btn">Learn More</a>
-  </section>
-
-  <section id="quick-links" class="content-section">
-    <h2>Quick Links</h2>
-    <ul>
-      <li>
-        <a href="https://justaghost.github.io/RegalRoots/public/">Public Site</a>
-        <p>
-          A demo showcasing potential content to be shared publicly. This includes insights into our farming practices, community events, and educational resources.
-        </p>
-      </li>
-      <li>
-        <a href="https://justaghost.github.io/RegalRoots/business/business-plan/">Business Plan</a>
-        <p>
-          A comprehensive overview of our business strategy, including goals, financial plans, and operational details. This document highlights our commitment to sustainable farming and community involvement.
-        </p>
-      </li>
-    </ul>
-  </section>
-
+  <!-- Business Section -->
   <section class="content-section">
-    <h2>History of the Farm</h2>
-    <h3>Founding of the Farm</h3>
-    <p>
-      Regal Roots was founded in 2010 with the vision of creating a sustainable and community-focused farm.
+    <h2 class="section-title">Business Documentation</h2>
+    <p class="section-subtitle">
+      Our strategy, financial projections, and operational framework
     </p>
-    <h3>Significant Milestones</h3>
-    <ul>
-      <li><strong>2012:</strong> Expanded to include a goatery</li>
-      <li><strong>2015:</strong> Introduced organic vegetable farming</li>
-      <li><strong>2018:</strong> Opened a farm-to-table restaurant</li>
-    </ul>
+    <div class="card business-highlight">
+      <h3 class="card-title">Business Plan</h3>
+      <p class="card-text">
+        Access our comprehensive business strategy, including our goals, financial projections, and operational framework for sustainable farming.
+      </p>
+      <a href="/RegalRoots/business" class="link-arrow">View Business Plan →</a>
+    </div>
   </section>
 
-  <section class="content-section">
-    <h2>Mission and Values</h2>
-    <h3>Sustainable Farming Practices</h3>
-    <p>
-      At Regal Roots, we prioritize sustainable farming practices to ensure the health of our land and produce.
+  <!-- History of the Farm -->
+  <section class="content-section farm-history">
+    <h2 class="section-title">Our History</h2>
+    <p class="section-subtitle">
+      A look back at how Regal Roots Farm came to be
     </p>
-    <h3>Community Involvement</h3>
-    <p>
-      We believe in giving back to the community and regularly host events and workshops to educate and engage with our neighbors.
-    </p>
+    <div class="card">
+      <h3 class="card-title">Founding of the Farm</h3>
+      <p class="card-text">
+        Regal Roots was founded in 2010 with the vision of creating a sustainable and community-focused farm.
+      </p>
+    </div>
+    <Timeline client:visible items={milestones} />
   </section>
 
-  <section class="content-section">
-    <h2>Key Products and Services</h2>
-    <h3>Organic Vegetables</h3>
-    <p>We offer a variety of organic vegetables grown with care and dedication.</p>
-    <h3>Goat Milk Products</h3>
-    <p>Our goatery produces high-quality goat milk, cheese, and yogurt.</p>
-    <h3>Farm-to-Table Restaurant</h3>
-    <p>Enjoy fresh, farm-to-table meals at our on-site restaurant.</p>
-  </section>
+  <!-- Mission & Values Section -->
+  <MissionValues />
 
-  <section class="content-section">
-    <h2>Contact Us</h2>
-    <p>
-      For more information or to get in touch, please visit our <a href="contact.md">Contact Us</a> page.
-    </p>
-  </section>
-</article>
+  <!-- Products Section -->
+  <ProductsSection />
 
-<style>
-  /* General Styles */
-  body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    color: #333;
-  }
-
-  h1, h2, h3 {
-    color: #4CAF50;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  ul {
-    list-style-type: disc;
-    margin-left: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  a {
-    color: #4CAF50;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  /* Hero Section */
-  .hero {
-    text-align: center;
-    background: #f4f4f4;
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .btn {
-    display: inline-block;
-    background: #4CAF50;
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: bold;
-    transition: background 0.3s ease;
-  }
-
-  .btn:hover {
-    background: #45a049;
-  }
-
-  /* Content Sections */
-  .content-section {
-    padding: 2rem 1rem;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .content-section h2 {
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .content-section ul {
-    margin-top: 1rem;
-  }
-
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background: #4CAF50;
-    color: white;
-    margin-top: 2rem;
-  }
-</style>
+  <!-- Contact Section -->
+  <ContactUsSection />
+</Layout>
